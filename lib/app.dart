@@ -20,9 +20,7 @@ class _AppState extends State<App> {
         backgroundColor: primaryColor,
         appBar: PreferredSize(
           child: DragTarget(
-            onWillAccept: (data) {
-              return true;
-            },
+            onWillAccept: (data) => true,
             onAccept: (data) {
               setState(() {
                 primaryColor = data as Color;

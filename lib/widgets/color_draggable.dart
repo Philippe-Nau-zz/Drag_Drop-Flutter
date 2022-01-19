@@ -26,7 +26,14 @@ class ColorDraggable extends StatelessWidget {
           color: color,
         ),
       ),
-      childWhenDragging: SizedBox(),
+      childWhenDragging: Container(
+        height: 30,
+        width: 30,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: color?.withOpacity(0.5),
+        ),
+      ),
     );
   }
 }
